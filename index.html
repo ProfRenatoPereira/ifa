@@ -123,32 +123,43 @@
 
             </ul> <!--Fim da Lista de Navegação do Desktop-->
 
-
-
-
-
-            
         </div>
-            
     
-    </header>
+    </header>  <!--FIM DO CABEÇALHO-->
 
 
     
-    <section class="banner">
-        <h2 class="banner__titulo">Física Robótica Programação Tecnociência</h2>
+    <section class="banner"> <!--Primeiro Espaço editável da página inicial-->
+        <h2 class="banner__titulo">Física - Robótica/Programação & Tecnociência</h2>
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
     </section>
 
 
+    <form action="/pesquisa" method="get">
+    <input 
+        type="search" 
+        class="banner__pesquisa" 
+        name="q" 
+        placeholder="Qual será sua próxima leitura?"
+        aria-label="Pesquisar livros">
+</form>
 
 
 
+    <input type="search" id="inputPesquisa" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
 
+<script>
+    const input = document.getElementById('inputPesquisa');
     
+    input.addEventListener('input', (e) => {
+        const termoPesquisa = e.target.value.toLowerCase();
+        console.log("Pesquisando por:", termoPesquisa);
+        // Aqui você adiciona a lógica para filtrar seus livros
+    });
+</script>
 
-            <div class="card">
+    <div class="card">
                 <!-- 1º linha -->
                 <div class="card__descrição">
                     <!-- 1º coluna -->

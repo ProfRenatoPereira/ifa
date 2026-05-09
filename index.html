@@ -133,31 +133,39 @@
         <h2 class="banner__titulo">Física - Robótica/Programação & Tecnociência</h2>
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
-    </section>
 
 
-    <form action="/pesquisa" method="get">
-    <input 
-        type="search" 
-        class="banner__pesquisa" 
-        name="q" 
-        placeholder="Qual será sua próxima leitura?"
-        aria-label="Pesquisar livros">
-</form>
+<!-- Campo de Pesquisa -->
+<input type="text" id="campoPesquisa" placeholder="Pesquisar itens..." onkeyup="filtrarItens()">
 
-
-
-    <input type="search" id="inputPesquisa" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+<!-- Lista de Itens -->
+<ul id="listaItens">
+  <li>Cadeira de Escritório</li>
+  <li>Mesa de Jantar</li>
+  <li>Sofá 3 Lugares</li>
+</ul>
 
 <script>
-    const input = document.getElementById('inputPesquisa');
-    
-    input.addEventListener('input', (e) => {
-        const termoPesquisa = e.target.value.toLowerCase();
-        console.log("Pesquisando por:", termoPesquisa);
-        // Aqui você adiciona a lógica para filtrar seus livros
-    });
+function filtrarItens() {
+  let input = document.getElementById('campoPesquisa').value.toLowerCase();
+  let itens = document.getElementById('listaItens').getElementsByTagName('li');
+
+  for (let i = 0; i < itens.length; i++) {
+    let textoItem = itens[i].textContent || itens[i].innerText;
+    if (textoItem.toLowerCase().indexOf(input) > -1) {
+      itens[i].style.display = "";
+    } else {
+      itens[i].style.display = "none";
+    }
+  }
+}
 </script>
+
+
+
+        
+    </section>
+
 
     <div class="card">
                 <!-- 1º linha -->
@@ -377,10 +385,6 @@
          CRÉDITOS: EquipeAlura/SEED-PR. Autoras e autores de códigos, imagens, sons e demais conhecimentos utilzados e multiplicados neste projeto aberto. Sobretudo, toda gratidão por gentis críticas e generosa motivação creditadas por estimadas e valorosos estudantes.
           <div class="copyright">© Copyright Física Renato Pereira ®ψΣ - 2024</div>
           </div>
-
-<!-- Substitua YOUR_ENGINE_ID pela sua ID gerada no painel -->
-<script async src="https://google.com"></script>
-<div class="gcse-search"></div>
 
     
 </body>

@@ -377,6 +377,28 @@
          CRÉDITOS: EquipeAlura/SEED-PR. Autoras e autores de códigos, imagens, sons e demais conhecimentos utilzados e multiplicados neste projeto aberto. Sobretudo, toda gratidão por gentis críticas e generosa motivação creditadas por estimadas e valorosos estudantes.
           <div class="copyright">© Copyright Física Renato Pereira ®ψΣ - 2024</div>
           </div>
+
+
+
+
+const campoPesquisa = document.querySelector("#input-pesquisa");
+
+// Detecta quando o usuário pressiona uma tecla
+campoPesquisa.addEventListener("keypress", function(event) {
+  // Se a tecla for "Enter"
+  if (event.key === "Enter") {
+    const termoBusca = campoPesquisa.value;
+    
+    // Aqui você define o que acontece. Exemplo: redirecionar para o Google
+    window.location.href = `https://google.com{termoBusca}`;
+    
+    // Ou você pode filtrar itens em uma lista na sua própria página
+    console.log("Usuário buscou por:", termoBusca);
+  }
+});
+
+
+    
 </body>
 
 </html>

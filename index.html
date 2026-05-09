@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head> #INSTRUMENTOS DO PROGRAMADOR#
+<head> <!--INSTRUMENTOS DO PROGRAMADOR-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFA ®ψΣ CCMSCTM</title>
@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <header class="cabeçalho">
-        <div class="container">
-            <input type="checkbox" id="menu" class="container__botao">
-            <label for="menu" class="container__rotulo">
-                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+<body> <!--CORPO DA PÁGINA INICIAL-->
+    <header class="cabeçalho"> <!--CABEÇALHO E CLASSE PARA O CSS STYLE-->
+        <div class="container"> <!--UMA DIVISÃO PARA COMPORTAR OS ELEMENTOS DO CABEÇALHO E AS CLASSES DE CSS-->
+            <input type="checkbox" id="menu" class="container__botao"> <!--Cria caixa de seleção (checkbox) interativa, usada para controlar elementos de interface (AQUI: menus "hambúrguer" responsivos).--> 
+            <label for="menu" class="container__rotulo"> <!--A área clicável que interage com o botão do menu-->
+                <span class="cabeçalho__menu-hamburguer container__imagem"></span> <!--Estiliza o menu hamburger-->
             </label>
-            <ul class="lista-menu">
-                <li class="lista-menu__titulo">Disciplinas 2</li>
-                <li class="lista-menu__item">
+            <ul class="lista-menu"> <!-- Lista Oculta de links de Navegação do site no HAMBURGER PARA O CELULAR-->
+                <li class="lista-menu__titulo">DISCIPLINAS</li>
+                <li class="--lista-menu__item">
                     <a href="#" class="lista-menu__link">Arte</a>
                 </li>
                 <li class="lista-menu__item">
@@ -56,18 +56,20 @@
                 <li class="lista-menu__item">
                     <a href="#" class="lista-menu__link">Sociologia</a>
                 </li>
-            </ul>
-            <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem">
+            </ul> <!--Fim da Lista de Navegação de celular-->
+
+            
+            <img src="img/Logo.svg" alt="Logo da Alurabooks" class="container__imagem"> <!-- LOGO DO SITE NO CABEÇALHO-->
             <h1 class="container__titulo"><b class="container__titulo--negrito">IFA ®ψΣ</b> CCMSCTM</h1>
-        </div>
+        </div> <!-- TÍTULO DO SITE NO CABEÇALHO E CLASSE DO CSS-->
 
-        <ul class="opções">
-            <input type="checkbox" id="opções-menu" class="opções__botão">
+        <ul class="opções"> <!-- Lista Vísivel de links de Navegação do site no HAMBURGER DO CBEÇALHO PARA O DESKTOP-->
+            <input type="checkbox" id="opções-menu" class="opções__botão"> <!--input cria um marcador clicável, id identifica para label usar o for e endereçar a ação, o class leva ao CSS-->
             <label for="opções-menu" class="opções__rotulo">
-                <li class="opções__item">Disciplinas</li>
+                <li class="opções__item">DISCIPLINAS</li>
             </label>
 
-            <ul class="lista-menu">
+            <ul class="lista-menu"> <!-- Lista Oculta de links de Navegação do site no HAMBURGER PARA O DESKTOP-->
                 <li class="lista-menu__item">
                     <a href="#" class="lista-menu__link">Arte</a>
                 </li>
@@ -102,57 +104,12 @@
                     <a href="#" class="lista-menu__link">Sociologia</a>
                 </li>
 
-            </ul>
+            </ul> <!--Fim da Lista de Navegação de celular-->
             
 
             <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
 
-           <ul class="opções">
-            <input type="checkbox" id="opções-menu" class="opções__botão">
-            <label for="opções-menu" class="opções__rotulo">
-                <li class="opções__item">Disciplinas</li>
-            </label>
-
-            <ul class="lista-menu">
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Arte</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Biologia</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Física</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Filosofia</a>
-                </li>
-                  <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Geografia</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">História</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Letras</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Linguagens</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Matemática</a>
-                </li>
-                 <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Química</a>
-                </li>
-                <li class="lista-menu__item">
-                    <a href="#" class="lista-menu__link">Sociologia</a>
-                </li>
-            </ul>
-
- 
-
-
-
+        
             
             <li class="opções__item"><a href="#" class="opções__link">Minha estante</a></li>
         </ul>
@@ -170,6 +127,9 @@
             </a>
         </div>
     </header>
+
+
+    
     <section class="banner">
         <h2 class="banner__titulo">Física Robótica Programação Tecnociência</h2>
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>

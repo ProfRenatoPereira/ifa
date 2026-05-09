@@ -134,40 +134,21 @@
         <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
         <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
 
-
-<!-- Campo de Pesquisa -->
-<input type="text" id="campoPesquisa" placeholder="Pesquisar itens..." onkeyup="filtrarItens()">
-
-<!-- Lista de Itens -->
-<ul id="listaItens">
-  <li>Cadeira de Escritório</li>
-  <li>Mesa de Jantar</li>
-  <li>Sofá 3 Lugares</li>
-</ul>
-
-<script>
-function filtrarItens() {
-  let input = document.getElementById('campoPesquisa').value.toLowerCase();
-  let itens = document.getElementById('listaItens').getElementsByTagName('li');
-
-  for (let i = 0; i < itens.length; i++) {
-    let textoItem = itens[i].textContent || itens[i].innerText;
-    if (textoItem.toLowerCase().indexOf(input) > -1) {
-      itens[i].style.display = "";
-    } else {
-      itens[i].style.display = "none";
-    }
-  }
-}
-</script>
-
-
-        <form action="https://www.google.com/search" method="GET">
-  <input type="hidden" name="sitesearch" value="seusite.com">
-  <input type="text" name="q" placeholder="Buscar no site...">
+        <form action="resultados.html" method="GET" target="_blank">
+  <input type="text" name="busca" placeholder="O que você procura?">
   <button type="submit">Pesquisar</button>
 </form>
 
+
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+  <!-- O 'q' é o parâmetro que o Google usa para a busca -->
+  <input type="text" name="q" placeholder="Pesquise no site...">
+  
+  <!-- O trecho 'site:seusite.com' limita a busca apenas ao seu domínio -->
+  <input type="hidden" name="as_sitesearch" value="seusite.com.br">
+  
+  <button type="submit">Buscar</button>
+</form>
 
 
         

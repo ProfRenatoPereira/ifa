@@ -21,6 +21,8 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    position: relative; /* ou fixed/absolute */
+    z-index: 9999; /* Um valor alto para ficar por cima */
 }
 
 .titulo {

@@ -90,5 +90,6 @@ body, html {
 
 
 .tabela {
- border:1px solid black;style="width:100%"
+ border:1px;
+ width:100%;
 }

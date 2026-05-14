@@ -87,3 +87,8 @@ body, html {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+
+.tabela {
+ border:1px solid black;style="width:100%"
+}
